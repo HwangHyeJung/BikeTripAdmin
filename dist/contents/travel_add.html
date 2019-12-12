@@ -18,7 +18,11 @@
     <title>Bike Trip Admin</title>
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
     <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <link href="vendors/quill/css/quill.coreui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0-beta.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0-beta.0/css/free.min.css"> -->
 </head>
 
 <body class="c-app">
@@ -140,17 +144,21 @@
                                     <form>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="inputEmail4">제 목</label>
-                                                <input type="email" class="form-control" id="inputTitle">
+                                                <label for="title">제 목</label>
+                                                <input type="text" class="form-control" id="title">
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>한줄요약</label>
-                                            <input type="text" class="form-control" id="inputSummary1">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <label for="summary1">한줄요약</label>
+                                                <input type="text" class="form-control" id="summary1">
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>요약</label>
-                                            <textarea class="form-control" id="textarea1" rows="3"></textarea>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <label for="summary2">요약</label>
+                                                <textarea class="form-control" id="summary2" rows="3"></textarea>
+                                            </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
@@ -162,45 +170,92 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>카테고리</label>
-                                            <select class="form-control">
-                                                <option>선택</option>
-                                                <option>로드</option>
-                                                <option>산악</option>
-                                                <option>바다</option>
-                                                <option>산</option>
-                                                <option>강변</option>
-                                            </select>
+                                        <div class="form-row">
+                                            <div class="form-group" id="preview"></div>
                                         </div>
-                                        <div class="form-group">
-                                            <label>태그</label>
-                                            <input type="text" class="form-control" id="inputSummary1">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="category">카테고리</label>
+                                                <i id="plus_btn" class="icon-success cib-addthis"
+                                                    style="cursor: pointer;"></i>
+                                            </div>
                                         </div>
 
+                                        <div class="form-row t01">
+                                            <div class="form-group col-md-6">
+                                                <select id="category" class="form-control">
+                                                    <option>선택</option>
+                                                    <option>로드</option>
+                                                    <option>산악</option>
+                                                    <option>바다</option>
+                                                    <option>산</option>
+                                                    <option>강변</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <i id="x_btn" class="icon-danger cil-x-circle"
+                                                    style="cursor: pointer;"></i>
+                                            </div>
+                                        </div>
+                                        <div class="form-row t01">
+                                            <div class="form-group col-md-6">
+                                                <select id="category" class="form-control">
+                                                    <option>선택</option>
+                                                    <option>로드</option>
+                                                    <option>산악</option>
+                                                    <option>바다</option>
+                                                    <option>산</option>
+                                                    <option>강변</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <i id="x_btn" class="icon-danger cil-x-circle"
+                                                    style="cursor: pointer;"></i>
+                                            </div>
+                                        </div>
 
-                                        <!-- Plugins and scripts required by this view-->
-                                        <script src="js/google-maps.js"></script>
-                                        <script
-                                            src="https://maps.googleapis.com/maps/api/js?callback=InitMap&amp;key=AIzaSyASyYRBZmULmrmw_P9kgr7_266OhFNinPA"></script>
-
-
-                                        <div class="animated fadeIn">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <i class="icon-map"></i>Google Maps
-                                                    <a class="badge badge-danger" href="https://coreui.io/pro/">CoreUI
-                                                        Pro Component</a>
-                                                    <div class="card-header-actions">
-                                                        <a class="card-header-action"
-                                                            href="https://google-developers.appspot.com/maps/documentation/javascript/reference"
-                                                            target="_blank">
-                                                            <small class="text-muted">docs</small>
-                                                        </a>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <label>태그</label>
+                                                <input type="text" class="form-control" id="inputSummary1">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <!-- google map -->
+                                                <div class="animated fadeIn">
+                                                    <div class="card">
+                                                        <div class="row">
+                                                            <div class="col">위치</div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <input type="text" class="form-control" id="location"
+                                                                    size="40">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <button type="button"
+                                                                    class="btn btn-secondary">검색</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div id="map" style="height:360px; width:700px;"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="card-body">
-                                                    <div id="map" style="height:360px;"></div>
+                                            </div>
+                                            <!-- Text Editor -->
+                                            <div class="form-group col-md-12">
+                                                <div class="animated fade-in">
+                                                    <div class="card">
+                                                        <div class="card-header">컨텐츠</div>
+                                                        <div class="card-body">
+                                                            <!-- Create toolbar & editor container -->
+                                                            <div id="editor" style="height:360px">
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -212,8 +267,6 @@
                     </div>
             </main>
         </div>
-
-
         <!-- end of body -->
         <footer class="c-footer">
         </footer>
@@ -221,6 +274,14 @@
     <!-- CoreUI and necessary plugins-->
     <script src="vendors/pace-progress/js/pace.min.js"></script>
     <script src="vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/travel.js"></script>
+    <script src="js/using_map.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap&amp;key=AIzaSyASyYRBZmULmrmw_P9kgr7_266OhFNinPA"></script>
+    <script src="vendors/quill/js/quill.min.js"></script>
+    <script src="js/text-editor.js"></script>
 
 </body>
 
