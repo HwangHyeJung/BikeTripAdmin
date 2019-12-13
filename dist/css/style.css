@@ -182,7 +182,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #321fdb;
 }
 
@@ -1704,14 +1704,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #321fdb;
-  border-color: #321fdb;
+  background-color: #3E5B8C;
+  border-color: #3E5B8C;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #2a1ab9;
-  border-color: #2819ae;
+  background-color: #354774;
+  border-color: #354774;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -11627,7 +11627,7 @@ html:not([dir="rtl"]) .c-sidebar.c-sidebar-show.c-sidebar-right, html:not([dir="
 
 .c-sidebar .c-sidebar-nav-link:hover, .c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
   color: #fff;
-  background: #321fdb;
+  background: #3E5B8C;
 }
 
 .c-sidebar .c-sidebar-nav-link:hover .c-sidebar-nav-icon, .c-sidebar .c-sidebar-nav-dropdown-toggle:hover .c-sidebar-nav-icon {

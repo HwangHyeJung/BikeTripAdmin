@@ -5,7 +5,7 @@
 * @link https://coreui.io/pro/
 * Copyright (c) 2019 creativeLabs Å�ukasz Holeczek
 * License (https://coreui.io/pro/license)
-* Publishing  By Michelle Hwang
+* Publishing By Michelle Hwang
 -->
 <html lang="en">
 
@@ -18,10 +18,12 @@
   <title>Bike Trip Admin</title>
   <!-- Main styles for this application-->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/admin.css" rel="stylesheet">
   <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
 </head>
 
 <body class="c-app">
+  <!-- start side-bar -->
   <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
     <div class="c-sidebar-brand"><img class="c-sidebar-brand-full" src="assets/brand/coreui-pro-base-white.svg"
         width="118" height="46" alt="CoreUI Logo"><img class="c-sidebar-brand-minimized"
@@ -32,12 +34,16 @@
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
           </svg> 메 인<span class="badge badge-info">NEW</span></a></li>
       <li class="c-sidebar-nav-title">회 원</li>
+      <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="login.html">
+          <svg class="c-sidebar-nav-icon">
+            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+          </svg> 로그인</a></li>
       <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
           <svg class="c-sidebar-nav-icon">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
           </svg> 회원목록</a></li>
       <li class="c-sidebar-nav-title">콘텐츠</li>
-      <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+      <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="contents/travel_list.html">
           <svg class="c-sidebar-nav-icon">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-tag"></use>
           </svg> 여행지</a></li>
@@ -92,7 +98,7 @@
       <li class="c-sidebar-nav-divider"></li>
     </ul>
   </div>
-  <!-- End of MenuBar-->
+  <!-- End of SideBar-->
 
   <div class="c-wrapper">
 
@@ -223,7 +229,8 @@
                       <div class="row">
                         <div class="col-6">
                           <div class="c-callout c-callout-info"><small class="text-muted">Travel Destination</small>
-                            <div class="text-value-lg"><a href="./contents/travel_list.html">여행지</a></div>
+                            <div class="text-value-lg"><a href="./contents/travel_list.html">여행지</a>
+                            </div>
                           </div>
                         </div>
                         <!-- /.col-->
