@@ -1,3 +1,7 @@
+tr[data-href] {
+    cursor: pointer;
+}
+
 .icon-success {
     color: #2eb85c;
     margin-left: 5px;

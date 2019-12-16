@@ -7,14 +7,13 @@
 * License (https://coreui.io/pro/license)
 * Publishing  By Michelle Hwang
 -->
-<html lang="en">
+<html lang="ko">
 
 <head>
     <base href="./../">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>Bike Trip Admin</title>
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
@@ -126,6 +125,7 @@
                 <ol class="breadcrumb border-0 m-0 px-0 px-md-3">
                     <li class="breadcrumb-item active">Main</li>
                     <li class="breadcrumb-item active">여행지</li>
+                    <li class="breadcrumb-item active">컨텐츠추가</li>
                 </ol>
         </header>
 
@@ -141,31 +141,35 @@
                                 <div class="card-header card-bgcolor-admin"> 콘텐츠 정보</div>
                                 <div class="card-body">
 
-                                    <form>
+                                    <form id="travelForm" method="GET" action="">
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="title">제 목</label>
-                                                <input type="text" class="form-control" id="title">
+                                                <input type="text" class="form-control" id="title" name="title"
+                                                    maxlength="50" autofocus>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
                                                 <label for="summary1">한줄요약</label>
-                                                <input type="text" class="form-control" id="summary1">
+                                                <input type="text" class="form-control" id="summary1" name="summary1"
+                                                    maxlength="100">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
                                                 <label for="summary2">요약</label>
-                                                <textarea class="form-control" id="summary2" rows="3"></textarea>
+                                                <textarea class="form-control" id="summary2" name="summary2"
+                                                    rows="3"></textarea>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label>대표이미지</label>
                                                 <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="customFile">
-                                                    <label class="custom-file-label" for="customFile">Choose
+                                                    <input type="file" class="custom-file-input" id="imageFile"
+                                                        name="imageFile">
+                                                    <label class="custom-file-label" for="imageFile">Choose
                                                         file</label>
                                                 </div>
                                             </div>
@@ -175,7 +179,7 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="category">카테고리</label>
+                                                <label for="category1">카테고리</label>
                                                 <i id="plus_btn" class="icon-success cib-addthis"
                                                     style="cursor: pointer;"></i>
                                             </div>
@@ -183,13 +187,13 @@
 
                                         <div class="form-row t01">
                                             <div class="form-group col-md-6">
-                                                <select id="category" class="form-control">
-                                                    <option>선택</option>
-                                                    <option>로드</option>
-                                                    <option>산악</option>
-                                                    <option>바다</option>
-                                                    <option>산</option>
-                                                    <option>강변</option>
+                                                <select id="category1" class="form-control" name="category1">
+                                                    <option value="">선택</option>
+                                                    <option value="load">로드</option>
+                                                    <option value="mountainLoad">산악</option>
+                                                    <option value="sea">바다</option>
+                                                    <option value="mountain">산</option>
+                                                    <option value="river">강변</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-6">
@@ -199,13 +203,13 @@
                                         </div>
                                         <div class="form-row t01">
                                             <div class="form-group col-md-6">
-                                                <select id="category" class="form-control">
+                                                <select id="category2" class="form-control" name="category2">
                                                     <option>선택</option>
-                                                    <option>로드</option>
-                                                    <option>산악</option>
-                                                    <option>바다</option>
-                                                    <option>산</option>
-                                                    <option>강변</option>
+                                                    <option value="load">로드</option>
+                                                    <option value="mountainLoad">산악</option>
+                                                    <option value="sea">바다</option>
+                                                    <option value="mountain">산</option>
+                                                    <option value="river">강변</option>
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-6">
@@ -217,7 +221,7 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
                                                 <label>태그</label>
-                                                <input type="text" class="form-control" id="inputSummary1">
+                                                <input type="text" class="form-control" id="tag" name="tag">
                                             </div>
                                         </div>
                                         <div class="form-row">
@@ -231,7 +235,7 @@
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <input type="text" class="form-control" id="location"
-                                                                    size="40">
+                                                                    name="location" size="40">
                                                             </div>
                                                             <div class="form-group col-md-6">
                                                                 <button id="travel_search" type="button"
@@ -251,7 +255,7 @@
                                                         <div class="card-header card-bgcolor-admin">컨텐츠</div>
                                                         <div class="card-body">
                                                             <!-- Create toolbar & editor container -->
-                                                            <div id="editor" style="height:360px">
+                                                            <div id="editor" name="editor" style="height:360px">
 
                                                             </div>
                                                         </div>
@@ -261,7 +265,7 @@
                                         </div>
                                         <div class="bottom_btn">
                                             <button type="submit" class="btn btn-primary margin1">등 록</button>
-                                            <button type="submit" class="btn btn-secondary">취 소</button>
+                                            <button type="button" class="btn btn-secondary">취 소</button>
                                         </div>
 
                                     </form>
@@ -278,12 +282,15 @@
     <!-- CoreUI and necessary plugins-->
     <script src="vendors/pace-progress/js/pace.min.js"></script>
     <script src="vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
+
     <!-- Plugins and scripts required by this view-->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="js/travel.js"></script>
+    <script src="vendors/jquery/js/jquery.slim.min.js"></script>
+    <script src="vendors/jquery-validation/js/jquery.validate.js"></script>
+    <script src="js/validation_admin.js"></script>
+    <script src="js/travel_add.js"></script>
     <script src="js/using_map.js"></script>
     <script
-        src="https://maps.googleapis.com/maps/api/js?callback=initMap&amp;key=AIzaSyCvJw60o1U36wfayfDq_IV2MzXF3bkvafU"></script>
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap&amp;key=IzaSyCvJw60o1U36wfayfDq_IV2MzXF3bkvafU"></script>
     <script src="vendors/quill/js/quill.min.js"></script>
     <script src="js/text-editor.js"></script>
 
