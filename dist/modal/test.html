@@ -1,0 +1,38 @@
+<html lang="kr">
+
+<head>
+    <base href="./../">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>Bike Trip Admin</title>
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#placeModal">
+        Launch demo modal
+    </button>
+
+
+    <div id="modal"></div>
+</body>
+<!-- CoreUI and necessary plugins-->
+<script src="vendors/pace-progress/js/pace.min.js"></script>
+<script src="vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
+<script src="vendors/jquery/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#modal").load("/modal/spot_modal.html")
+    });
+</script>
