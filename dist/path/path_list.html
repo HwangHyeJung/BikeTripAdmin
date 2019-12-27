@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+* CoreUI Pro based Bootstrap Admin Template
+* @version v3.0.0-beta.0
+* @link https://coreui.io/pro/
+* Copyright (c) 2019 creativeLabs Å�ukasz Holeczek
+* License (https://coreui.io/pro/license)
+* Publishing  By Michelle Hwang(2019.12.24.)
+-->
+<html lang="ko">
+
+<head>
+    <base href="./../">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>Bike Trip Admin</title>
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+</head>
+
+<body class="c-app">
+    <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
+        <div class="c-sidebar-brand"><img class="c-sidebar-brand-full" src="assets/brand/coreui-pro-base-white.svg"
+                width="118" height="46" alt="CoreUI Logo"><img class="c-sidebar-brand-minimized"
+                src="assets/brand/coreui-signet-white.svg" width="118" height="46" alt="CoreUI Logo"></div>
+        <ul class="c-sidebar-nav" data-drodpown-accordion="true">
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
+                    </svg> 메 인<span class="badge badge-info">NEW</span></a></li>
+            <li class="c-sidebar-nav-title">회 원</li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                    </svg> 회원목록</a></li>
+            <li class="c-sidebar-nav-title">콘텐츠</li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-tag"></use>
+                    </svg> 여행지</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bike"></use>
+                    </svg> 경 로</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-arrow-circle-bottom"></use>
+                    </svg> 회원경로</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-location-pin"></use>
+                    </svg> 장 소</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-touch-app"></use>
+                    </svg> 콘텐츠승인</a></li>
+            <li class="c-sidebar-nav-title">BikeTrip</li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-calendar"></use>
+                    </svg> 일정현황</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
+                    </svg> 추천목록</a></li>
+            <li class=" c-sidebar-nav-title">앱</li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-square"></use>
+                    </svg> 배너관리</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bullhorn"></use>
+                    </svg> 사용자공지사항</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+                    </svg> 이용약관</a></li>
+            <li class="c-sidebar-nav-title">시스템</li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-contact"></use>
+                    </svg> 관리자관리</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+                    <svg class="c-sidebar-nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-code"></use>
+                    </svg> 코드관리</a></li>
+            <div class="dropdown-divider"></div>
+            <li class="c-sidebar-nav-divider"></li>
+        </ul>
+    </div>
+    <!-- End of MenuBar-->
+
+    <div class="c-wrapper">
+
+        <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
+            <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar"
+                data-class="c-sidebar-show"><span class="c-header-toggler-icon"></span></button>
+            <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar"
+                data-class="c-sidebar-lg-show" responsive="true"><span class="c-header-toggler-icon"></span></button>
+            <ul class="c-header-nav mfs-auto">
+                <li class="c-header-nav-item px-3">
+                    <button class="c-class-toggler c-header-nav-btn" type="button" id="header-tooltip"
+                        data-target="body" data-class="c-dark-theme" data-toggle="c-tooltip" data-placement="bottom"
+                        title="Toggle Light/Dark Mode">
+                        <svg class="c-icon c-d-dark-none">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-moon"></use>
+                        </svg>
+                        <svg class="c-icon c-d-light-none">
+                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-sun"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li class="c-header-nav-item px-3">
+                    홍길동 Logout
+                </li>
+            </ul>
+            <div class="c-subheader justify-content-between px-3">
+                <ol class="breadcrumb border-0 m-0 px-0 px-md-3">
+                    <li class="breadcrumb-item active">Main</li>
+                    <li class="breadcrumb-item active">경로</li>
+                </ol>
+        </header>
+
+
+
+        <div class="c-body">
+            <main class="c-main">
+                <div class="container-fluid">
+
+                    <!-- /.row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header card-bgcolor-admin"> 경로</div>
+                                <div class="card-header">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-auto">
+                                                <select id="status" name="status" class="form-control">
+                                                    <option value="total">전체</option>
+                                                    <option value="active">활성</option>
+                                                    <option value="inaactive">비활성</option>
+                                                    <option value="pending">등록대기</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                            </div>
+                                            <div class="col-auto">
+                                                <select id="search" name="search" class="form-control">
+                                                    <option value="total">전체</option>
+                                                    <option value="title">제목</option>
+                                                    <option value="tag">태그</option>
+                                                    <option value="register">등록자</option>
+                                                    <option value="local">지역</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-auto">
+                                                <input type="text" class="form-control mb-2" id="inlineFormInput">
+                                            </div>
+                                            <div class="col-auto"><button type="submit"
+                                                    class="btn btn-primary mb-2">검색</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-responsive-sm table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>번호</th>
+                                                <th>제목</th>
+                                                <th>출발지</th>
+                                                <th>거리</th>
+                                                <th>상태</th>
+                                                <th>등록자</th>
+                                                <th>등록일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-href="path/path_detail.html?id=1">
+                                                <td>1</td>
+                                                <td>서울시 영등포</td>
+                                                <td>서울 영등포구</td>
+                                                <td>28.5km</td>
+                                                <td><span class="badge badge-success">활성</span></td>
+                                                <td>홍길동</td>
+                                                <td>2020.01.01</td>
+                                            </tr>
+                                            <tr data-href="path/path_detail.html?id=2">
+                                                <td>2</td>
+                                                <td>춘천</td>
+                                                <td>경기도 춘천시</td>
+                                                <td>18.9km</td>
+                                                <td><span class="badge badge-warning">등록대기</span></td>
+                                                <td>홍길동</td>
+                                                <td>2019.12.12.</td>
+                                            </tr>
+                                            <tr data-href="path/path_detail.html?id=3">
+                                                <td>3</td>
+                                                <td>여의도~한강</td>
+                                                <td>서울 여의도동</td>
+                                                <td>100Km</td>
+                                                <td><span class="badge badge-secondary">비활성</span></td>
+                                                <td>홍길동</td>
+                                                <td>2019.12.01</td>
+                                            </tr>
+                                            <tr data-href="path/path_detail.html?id=4">
+                                                <td>4</td>
+                                                <td>수리산 라이딩</td>
+                                                <td>경기도 군포시 대야미동</td>
+                                                <td>21.5km</td>
+                                                <td><span class="badge badge-secondary">비활성</span></td>
+                                                <td>홍길동</td>
+                                                <td>2019.12.01</td>
+                                            </tr>
+                                            <tr data-href="path/path_detail.html?id=5">
+                                                <td>5</td>
+                                                <td>한강 라이딩 할텨?</td>
+                                                <td>서울 잠실쪽</td>
+                                                <td>501km</td>
+                                                <td><span class="badge badge-warning">등록대기</span></td>
+                                                <td>홍길동</td>
+                                                <td>2019.11.29</td>
+                                            </tr>
+                                            <tr data-href="path/path_detail.html?id=6">
+                                                <td>6</td>
+                                                <td>진해 벗꽃 향기 맡으며 라이딩 하실분~?</td>
+                                                <td>진해</td>
+                                                <td>20Km</td>
+                                                <td><span class="badge badge-success">활성</span></td>
+                                                <td>홍길동</td>
+                                                <td>2019.03.01</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                                <div class="card-header text-right">
+                                    <a href="path/path_add.html" class="btn btn-primary" role="button">
+                                        추 가</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- /.col-->
+                </div>
+
+        </div>
+    </div>
+    </main>
+    </div>
+    <!-- end of body -->
+
+    <footer class="c-footer">
+    </footer>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/pace-progress/js/pace.min.js"></script>
+    <script src="vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="vendors/jquery/js/jquery.slim.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document.body).on("click", "tr[data-href]",
+                function () {
+                    window.location.href = this.dataset.href;
+                });
+        });
+    </script>
+</body>
+
+</html>
