@@ -5,7 +5,7 @@
 * @link https://coreui.io/pro/
 * Copyright (c) 2019 creativeLabs Å�ukasz Holeczek
 * License (https://coreui.io/pro/license)
-* Publishing  By Michelle Hwang
+* Publishing  By Michelle Hwang(2019.12.28.)
 -->
 <html lang="ko">
 
@@ -19,7 +19,6 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/admin.css" rel="stylesheet">
     <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
-    <link href="vendors/quill/css/quill.coreui.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0-beta.0/css/all.min.css">
     <!-- <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0-beta.0/css/free.min.css"> -->
 </head>
@@ -124,8 +123,8 @@
             <div class="c-subheader justify-content-between px-3">
                 <ol class="breadcrumb border-0 m-0 px-0 px-md-3">
                     <li class="breadcrumb-item active">Main</li>
-                    <li class="breadcrumb-item active">여행지</li>
-                    <li class="breadcrumb-item active">콘텐츠추가</li>
+                    <li class="breadcrumb-item active">장소</li>
+                    <li class="breadcrumb-item active">장소수정</li>
                 </ol>
         </header>
 
@@ -139,77 +138,53 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="card">
-                                    <div class="card-header card-bgcolor-admin"> 콘텐츠 정보</div>
+                                    <div class="card-header card-bgcolor-admin">
+                                        <div class="row">
+                                            장소 정보
+                                        </div>
+                                    </div>
                                     <div class="card-body">
-
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="title">제 목</label>
-                                                <input type="text" class="form-control" id="title" name="title"
-                                                    maxlength="50" autofocus>
+                                                <label for="shop">상호명</label>
+                                                <input type="text" class="form-control" id="shop" name="shop"
+                                                    maxlength="50" value="명품식당" autofocus>
                                             </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <label for="summary1">한줄요약</label>
-                                                <input type="text" class="form-control" id="summary1" name="summary1"
-                                                    maxlength="100">
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-12">
-                                                <label for="summary2">요약</label>
-                                                <textarea class="form-control" id="summary2" name="summary2"
-                                                    rows="3"></textarea>
+                                            <div class="form-group col-md-6">
+                                                <label for="category">분류</label>
+                                                <select id="category" name="category" class="form-control">
+                                                    <option value="">선택</option>
+                                                    <option value="restaurant" selected>음식점</option>
+                                                    <option value="accommodation">숙박</option>
+                                                    <option value="convenience">편의점</option>
+                                                    <option value="toilet">화장실</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label>대표이미지</label>
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="imageFile"
-                                                        name="imageFile">
-                                                    <label class="custom-file-label" for="imageFile">Choose
-                                                        file</label>
-                                                </div>
+                                                <label for="open">운영시간</label>
+                                                <input type="text" class="form-control" id="open" name="open"
+                                                    maxlength="20" value="08:00 ~ 22:00">
                                             </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <!-- 대표이미지 미리보기 -->
-                                            <div class="form-group" id="preview">
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="category1">카테고리</label>
-                                                <i id="plus_btn" class="icon-success cib-addthis align-middle"
-                                                    style="cursor: pointer;"></i>
+                                                <label for="tel">전화</label>
+                                                <input type="text" class="form-control" id="tel" name="tel"
+                                                    maxlength="13" value="02-1111-2222">
                                             </div>
                                         </div>
-                                        <!-- 카테고리 리스트 -->
-                                        <div id="category_list">
-                                            <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <select id="category1" class="form-control" name="category1">
-                                                        <option value="">선택</option>
-                                                        <option value="load">로드</option>
-                                                        <option value="mountainLoad">산악</option>
-                                                        <option value="sea">바다</option>
-                                                        <option value="mountain">산</option>
-                                                        <option value="river">강변</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <i class="icon-danger cil-x-circle align-middle x-btn"
-                                                        style="cursor: pointer;"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
-                                                <label>태그</label>
-                                                <input type="text" class="form-control" id="tag" name="tag">
+                                                <label for="homepage">홈페이지</label>
+                                                <input type="text" class="form-control" id="homepage" name="homepage"
+                                                    value="http://www.homepage.co.kr" maxlength="100">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <label for="facility">편의시설</label>
+                                                <textarea class="form-control" id="facility" name="facility"
+                                                    rows="5">자체 주차장</textarea>
                                             </div>
                                         </div>
 
@@ -218,47 +193,80 @@
                                                 <!-- google map -->
                                                 <div class="card">
                                                     <div class="form-row">
-                                                        <div class="col-md-7">위치</div>
-                                                        <div class="col-md-1">범위</div>
+                                                        <div class="col-md-6">위치</div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
                                                             <input type="text" class="form-control" id="location"
-                                                                name="location" size="40">
+                                                                name="location" size="40" value="위치정보">
                                                         </div>
                                                         <div class="form-group col-md-1">
                                                             <button id="travel_search" type="button"
                                                                 class="btn btn-secondary">검색</button>
                                                         </div>
-                                                        <div calss="col-md-2">
-                                                            <input type="text" class="form-control" id="locRange"
-                                                                name="locRange" value="1">
-                                                        </div>
-                                                        <div calss="col-md-3">&nbsp;Km</div>
                                                     </div>
                                                     <div class="card-body">
                                                         <div id="map" style="height:360px; width:700px;"></div>
+                                                        <div>
+                                                            <table class="table table-borderless">
+                                                                <tr>
+                                                                    <th class="text-center" style="width: 10rem;">주소
+                                                                    </th>
+                                                                    <td>서울시 영등포구 여의도동</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>이미지</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="imageFile"
+                                                        name="imageFile">
+                                                    <label class="custom-file-label" for="imageFile">Choose
+                                                        file</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- list of images -->
+                                        <div class="form-row" id="img_list">
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/aaa.jpg" class="card-img-top img-thumbnail">
+                                                <div class="card-body">
+                                                    <p class="card-text">스크린샷, 2019-12-24
+                                                        13-26-20.png</p>
+                                                    <p class="card-text text-right"><button type="button"
+                                                            class="btn btn-outline-danger x-btn lm-2">삭제</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/aaa.jpg" class="card-img-top img-thumbnail">
+                                                <div class="card-body">
+                                                    <p class="card-text">스크린샷, 2019-12-24
+                                                        13-26-20.png</p>
+                                                    <p class="card-text text-right"><button type="button"
+                                                            class="btn btn-outline-danger x-btn lm-2">삭제</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="card" style="width: 18rem;">
+                                                <img src="images/aaa.jpg" class="card-img-top img-thumbnail">
+                                                <div class="card-body">
+                                                    <p class="card-text">스크린샷, 2019-12-24
+                                                        13-26-20.png</p>
+                                                    <p class="card-text text-right"><button type="button"
+                                                            class="btn btn-outline-danger x-btn lm-2">삭제</button>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- end row -->
-
-                                        <div class="form-row">
-                                            <!-- Text Editor -->
-                                            <div class="form-group col-md-12">
-                                                <div class="animated fade-in">
-                                                    <div class="card">
-                                                        <div class="card-header card-bgcolor-admin">콘텐츠</div>
-                                                        <div class="card-body">
-                                                            <!-- Create toolbar & editor container -->
-                                                            <div id="editor" name="editor" style="height:360px">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
                                     </div>
                                 </div>
@@ -286,7 +294,32 @@
                                         </div>
 
                                         <!-- 경로리스트 -->
-                                        <div id="path_list"></div>
+                                        <div id="path_list">
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="path_num" id="path_num" value="1"
+                                                        class="mr-3">
+                                                    서울시 영등포구, 26km, 쉬움, 30분
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="path_num" id="path_num" value="2"
+                                                        class="mr-3">
+                                                    서울시 영등포구, 26km, 쉬움, 30분
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="path_num" id="path_num" value="2"
+                                                        class="mr-3">
+                                                    서울시 영등포구, 26km, 쉬움, 30분
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <div class="form-group row">
                                             <div class="col-md-1 align-self-center text-right">
@@ -301,21 +334,44 @@
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-md-1 align-self-center text-right">
-                                                장소
+                                                여행지
                                             </div>
                                             <div class="col-md-2">
-                                                <input type="text" class="form-control" id="place" name="place"
-                                                    placeholder="장소 번호 입력">
+                                                <input type="text" class="form-control" id="travel" name="travel"
+                                                    placeholder="경로 번호 입력">
                                             </div>
                                             <div class="col-md-3">
-                                                <input type="button" class="btn btn-success" value="등록" id="place_add">
+                                                <input type="button" class="btn btn-success" value="등록" id="travel_add">
                                                 <input type="button" class="btn btn-info" data-toggle="modal"
-                                                    data-target="#spotModal" value="검색">
+                                                    data-target="#travelModal" value="검색">
                                             </div>
                                         </div>
 
-                                        <!-- 장소리스트 -->
-                                        <div id="place_list">
+                                        <!-- 여행지 리스트 -->
+                                        <div id="travel_list">
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="travel_num" id="travel_num" value="1"
+                                                        class="mr-3">1. 한강
+                                                    서울
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="travel_num" id="travel_num" value="2"
+                                                        class="mr-3">2. 초보
+                                                    라이더를 위한 여행
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="travel_num" id="travel_num" value="2"
+                                                        class="mr-3">3. 제주도 해안도로 라이딩!
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="form-group row">
@@ -323,10 +379,10 @@
                                                 선택아이템
                                             </div>
                                             <div class="col-md-3 align-self-center">
-                                                <input type="button" class="btn btn-warning" value="UP" id="place_up">
+                                                <input type="button" class="btn btn-warning" value="UP" id="travel_up">
                                                 <input type="button" class="btn btn-warning" value="DOWN"
-                                                    id="place_down">
-                                                <input type="button" class="btn btn-danger" value="삭제" id="place_del">
+                                                    id="travel_down">
+                                                <input type="button" class="btn btn-danger" value="삭제" id="travel_del">
                                             </div>
                                         </div>
                                     </div>
@@ -334,7 +390,7 @@
                                         <div class="bottom_btn">
                                             <button type="button" class="btn btn-lg btn-secondary mr-2"
                                                 onclick="history.back();">취 소</button>
-                                            <button type="submit" class="btn btn-lg btn-primary">등 록</button>
+                                            <button type="submit" class="btn btn-lg btn-primary">수 정</button>
                                         </div>
                                     </div>
                                 </div>
@@ -349,10 +405,9 @@
     </div>
 
     <!-- modal -->
-    <div id="spot-modal"></div>
     <div id="path-modal"></div>
-
-
+    <div id="travel-modal"></div>
+    <div id="api-modal"></div>
 
 
     <!-- CoreUI and necessary plugins-->
@@ -362,12 +417,10 @@
     <!-- Plugins and scripts required by this view-->
     <script src="vendors/jquery/js/jquery.min.js"></script>
     <script src="vendors/jquery-validation/js/jquery.validate.js"></script>
-    <script src="js/travel_add.js"></script>
+    <script src="js/place_modify.js"></script>
     <script src="js/using_map.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?callback=initMap&amp;key=AIzaSyCvJw60o1U36wfayfDq_IV2MzXF3bkvafU"></script>
-    <script src="vendors/quill/js/quill.min.js"></script>
-    <script src="js/text-editor.js"></script>
 
 </body>
 

@@ -3,7 +3,7 @@
  * CoreUI Pro UI Kit
  * @version v3.0.0-beta.3
  * @link https://coreui.io/pro/
- * Copyright (c) 2019 creativeLabs Łukasz Holeczek
+ * Copyright (c) 2019 creativeLabs Ĺukasz Holeczek
  * License (https://coreui.io/pro/license/)
  */
 :root {
@@ -5089,7 +5089,7 @@ html:not([dir="rtl"]) .custom-select-lg {
 }
 
 .custom-file-input:lang(en) ~ .custom-file-label::after {
-  content: "Browse";
+  content: "업로드";
 }
 
 .custom-file-input ~ .custom-file-label[data-browse]::after {
@@ -5120,7 +5120,7 @@ html:not([dir="rtl"]) .custom-select-lg {
   z-index: 3;
   display: block;
   height: calc(1.5em + 0.75rem);
-  content: "Browse";
+  content: "업로드";
   background-color: #ebedef;
   border-left: inherit;
   border-radius: 0 0.25rem 0.25rem 0;
