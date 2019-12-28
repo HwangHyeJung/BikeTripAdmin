@@ -296,19 +296,49 @@
                                                     placeholder="경로 번호 입력">
                                             </div>
                                             <div class="col-md-3">
-                                                <input type="button" class="btn btn-success" value="등록">
+                                                <input type="button" class="btn btn-success" value="등록" id="path_add">
                                                 <input type="button" class="btn btn-info" data-toggle="modal"
                                                     data-target="#pathModal" value="검색">
                                             </div>
                                         </div>
+
+                                        <!-- 경로 리스트 -->
+                                        <div id="path_list">
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="path_num" id="path_num" value="1"
+                                                        class="mr-3">
+                                                    서울시 영등포구, 26km, 쉬움, 30분
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="path_num" id="path_num" value="2"
+                                                        class="mr-3">
+                                                    서울시 영등포구, 26km, 쉬움, 30분
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="path_num" id="path_num" value="2"
+                                                        class="mr-3">
+                                                    서울시 영등포구, 26km, 쉬움, 30분
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="form-group row">
                                             <div class="col-md-1 align-self-center text-right">
                                                 선택아이템
                                             </div>
                                             <div class="col-md-3 align-self-center">
-                                                <input type="button" class="btn btn-warning" value="UP">
-                                                <input type="button" class="btn btn-warning" value="DOWN">
-                                                <input type="button" class="btn btn-danger" value="삭제">
+                                                <input type="button" class="btn btn-warning" value="UP" id="path_up">
+                                                <input type="button" class="btn btn-warning" value="DOWN"
+                                                    id="path_down">
+                                                <input type="button" class="btn btn-danger" value="삭제" id="path_del">
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -320,25 +350,52 @@
                                                     placeholder="장소 번호 입력">
                                             </div>
                                             <div class="col-md-3">
-                                                <input type="button" class="btn btn-success" value="등록">
+                                                <input type="button" class="btn btn-success" value="등록" id="place_add">
                                                 <input type="button" class="btn btn-info" data-toggle="modal"
                                                     data-target="#spotModal" value="검색">
                                             </div>
                                         </div>
+
+                                        <!-- 장소리스트 -->
+                                        <div id="place_list">
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="place_num" id="place_num" value="1"
+                                                        class="mr-3">1. 식당, 명품식당</div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="place_num" id="place_num" value="2"
+                                                        class="mr-3">2. 호텔, 명품호텔</div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-1 align-self-center text-right"></div>
+                                                <div class="col-md-11">
+                                                    <input type="radio" name="place_num" id="place_num" value="2"
+                                                        class="mr-3">3. 호텔, 롯데 호텔 제주</div>
+                                            </div>
+                                        </div>
+
+
                                         <div class="form-group row">
                                             <div class="col-md-1 align-self-center text-right">
                                                 선택아이템
                                             </div>
                                             <div class="col-md-3 align-self-center">
-                                                <input type="button" class="btn btn-warning" value="UP">
-                                                <input type="button" class="btn btn-warning" value="DOWN">
-                                                <input type="button" class="btn btn-danger" value="삭제">
+                                                <input type="button" class="btn btn-warning" value="UP" id="place_up">
+                                                <input type="button" class="btn btn-warning" value="DOWN"
+                                                    id="place_down">
+                                                <input type="button" class="btn btn-danger" value="삭제" id="place_del">
                                             </div>
+
                                         </div>
                                     </div>
                                     <div class="card-footer">
                                         <div class="bottom_btn">
-                                            <button type="button" class="btn btn-lg btn-secondary">취 소</button>
+                                            <button type="button" class="btn btn-lg btn-secondary"
+                                                onclick="history.back();">취 소</button>
                                             <button type="submit" class="btn btn-lg btn-primary ml-2">등 록</button>
                                         </div>
                                     </div>
