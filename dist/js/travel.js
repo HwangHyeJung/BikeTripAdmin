@@ -43,8 +43,8 @@ $(document).ready(function (e) {
 
             //파일명이 길면 파일명...으로 처리
             var fileName = f.name;
-            if (fileName.length > 30) {
-                fileName = fileName.substring(0, 30) + "...";
+            if (fileName.length > 15) {
+                fileName = fileName.substring(0, 14) + "...";
             }
 
             //div에 이미지 추가

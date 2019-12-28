@@ -139,9 +139,36 @@
                         <div class="col-md-12">
                             <!-- body contents start -->
                             <div class="card">
-                                <div class="card-header card-bgcolor-admin"> 회원정보</div>
-                                <div class="card-body">
-                                    <form id="userForm" method="GET" action="">
+                                <form id="userForm" method="GET" action="">
+                                    <div class="card-header card-bgcolor-admin"> 회원정보</div>
+                                    <div class="card-body">
+                                        <div class="form-group row">
+                                            <label for="user_num" class="col-md-2 col-form-label">사용자번호</label>
+                                            <div class="col-md-10">
+                                                <input type="text" readonly class="form-control-plaintext" id="user_num"
+                                                    name="user_num" value="001">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="password" class="col-md-2 col-form-label">비밀번호</label>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" id="password"
+                                                    name="password" maxlength="50">
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="confirm_password" class="col-md-2 col-form-label">비밀번호
+                                                확인</label>
+                                            <div class="col-md-6">
+                                                <input type="password" class="form-control" id="confirm_password"
+                                                    name="confirm_password" maxlength="50">
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header card-bgcolor-admin"> 개인정보</div>
+                                    <div class="card-body">
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="title">이메일</label>
@@ -167,14 +194,14 @@
                                             </div>
                                         </div>
                                         <div class="form-row">
-                                            <div class="form-group col-md-4">
+                                            <div class="form-group col-md-6">
                                                 <label for="status">상태</label>
                                                 <select name="status" id="status" class="form-control">
                                                     <option value="active">활성</option>
                                                     <option value="inactive">비활성</option>
                                                 </select>
                                             </div>
-                                            <div class="form-group col-md-8">
+                                            <div class="form-group col-md-6">
                                                 <label for="gender">성별</label>
                                                 <div class="form-group" style="font-size: large;">
                                                     <div class="form-check form-check-inline">
@@ -190,25 +217,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="password">비밀번호</label>
-                                                <input type="password" class="form-control" id="password"
-                                                    name="password" maxlength="50">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="confirm_password">비밀번호 확인</label>
-                                                <input type="password" class="form-control" id="confirm_password"
-                                                    name="confirm_password" maxlength="50">
-                                            </div>
-                                        </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="bottom_btn">
-                                        <button type="button" class="btn btn-lg btn-secondary mr-2">취 소</button>
-                                        <button type="submit" class="btn btn-lg btn-primary">등 록</button>
+
                                     </div>
-                                </div>
+                                    <div class="card-footer">
+                                        <div class="bottom_btn">
+                                            <button type="button" class="btn btn-lg btn-secondary mr-2"
+                                                onclick="history.back();">취 소</button>
+                                            <button type="submit" class="btn btn-lg btn-primary">등 록</button>
+                                        </div>
+                                    </div>
                                 </form>
                                 <!-- body contents end -->
                             </div>
