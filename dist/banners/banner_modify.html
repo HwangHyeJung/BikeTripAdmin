@@ -5,7 +5,7 @@
 * @link https://coreui.io/pro/
 * Copyright (c) 2019 creativeLabs Å�ukasz Holeczek
 * License (https://coreui.io/pro/license)
-* Publishing  By Michelle Hwang
+* Publishing  By Michelle Hwang (2020.01.02.)
 -->
 <html lang="ko">
 
@@ -19,6 +19,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/admin.css" rel="stylesheet">
     <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <link href="vendors/quill/css/quill.coreui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0-beta.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@1.0.0-beta.0/css/free.min.css"> -->
 </head>
 
 <body class="c-app">
@@ -32,10 +35,6 @@
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
                     </svg> 메 인<span class="badge badge-info">NEW</span></a></li>
             <li class="c-sidebar-nav-title">회 원</li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="login.html">
-                    <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-input"></use>
-                    </svg> 로그인</a></li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
                     <svg class="c-sidebar-nav-icon">
                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
@@ -125,113 +124,142 @@
             <div class="c-subheader justify-content-between px-3">
                 <ol class="breadcrumb border-0 m-0 px-0 px-md-3">
                     <li class="breadcrumb-item active">Main</li>
-                    <li class="breadcrumb-item active">회원목록</li>
-                    <li class="breadcrumb-item active">회원정보수정</li>
+                    <li class="breadcrumb-item active">배너관리</li>
+                    <li class="breadcrumb-item active">배너수정</li>
                 </ol>
         </header>
+
 
 
         <div class="c-body">
             <main class="c-main">
                 <div class="container-fluid">
                     <!-- /.row-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!-- body contents start -->
-                            <div class="card">
-                                <div class="card-header card-bgcolor-admin"> 회원정보</div>
-                                <div class="card-body">
-                                    <div class="form-group row">
-                                        <label for="user_num" class="col-md-2 col-form-label">사용자번호</label>
-                                        <div class="col-md-10">
-                                            <input type="text" readonly class="form-control-plaintext" id="user_num"
-                                                name="user_num" value="10">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="email" class="col-md-2 col-form-label">이메일</label>
-                                        <div class="col-md-10">
-                                            <input type="text" readonly class="form-control-plaintext" id="email"
-                                                name="email" value="abcdefg@gmail.com">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="regist_date" class="col-md-2 col-form-label">등록일</label>
-                                        <div class="col-md-10">
-                                            <input type="text" readonly class="form-control-plaintext" id="regist_date"
-                                                name="regist_date" value="2019.01.01.">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-header card-bgcolor-admin"> 개인정보수정</div>
-                                <div class="card-body">
-                                    <form id="userForm" method="GET" action="">
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="tel">전화번호</label>
-                                                <input type="text" class="form-control" id="tel" name="tel"
-                                                    maxlength="13" value="010-111-2222" autofocus>
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="nick">닉네임</label>
-                                                <input type="text" class="form-control" id="nick" name="nick"
-                                                    value="고고라이딩" maxlength="50">
+                    <form id="bannerForm" method="GET" action="">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header card-bgcolor-admin"> 배너 수정</div>
+                                    <div class="card-body">
+                                        <div class="form-group row">
+                                            <label for="banner" class="col-md-1 col-form-label">배너번호</label>
+                                            <div class="col-md-10">
+                                                <input type="text" readonly class="form-control-plaintext" id="banner"
+                                                    name="banner" value="001">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="birthday">생년월일</label>
-                                                <input type="text" class="form-control" id="birthday" name="birthday"
-                                                    value="2001.01.01" maxlength="15">
+                                                <label for="banner">배너명</label>
+                                                <input type="text" class="form-control" id="banner" name="banner"
+                                                    maxlength="100" autofocus value="100만 회원 달성 널리널리 이벤트">
                                             </div>
+                                            <div class="col-md-6"></div>
+                                        </div>
+                                        <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="gender">성별</label>
-                                                <div class="form-group" style="font-size: large;">
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="gender"
-                                                            id="gender1" value="male" checked>
-                                                        <label class="form-check-label" for="gender1">남</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="gender"
-                                                            id="gender2" value="female">
-                                                        <label class="form-check-label" for="gender2">여</label>
+                                                <label>이미지</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="imageFile"
+                                                        name="imageFile">
+                                                    <label class="custom-file-label" for="imageFile">파일선택
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6"></div>
+                                        </div>
+                                        <div class="form-row" style="width: 20rem;">
+                                            <div class="form-group" id="preview"><img src="images/eee.jpeg"
+                                                    class="card-img-top img-thumbnail"></div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <div class="card-header card-bgcolor-admin">본문</div>
+                                                <div class="card-body">
+                                                    <!-- Create toolbar & editor container -->
+                                                    <div id="editor" name="editor" style="height:360px">
+                                                        Hello~
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="status">상태</label>
-                                                <select name="status" id="status" class="form-control">
+                                        <div class="form-group row align-middle">
+                                            <label class="col-md-1" for="url">타겟 URL</label>
+                                            <div class="col-md-11">
+                                                <input type="text" class="form-control" id="url" name="url"
+                                                    maxlength="100" value="http://www.jeegybike.co.kr/event/1">
+                                            </div>
+                                        </div>
+                                        <div class="from-group row">
+                                            <label class="col-md-1" for="s_date">기간</label>
+                                            <div class="col-md-11 form-group">
+                                                <input type="text" name=" s_date" value="2020.01.01" size="11"
+                                                    maxlength="11">일
+                                                <input type="text" name="s_hour" value="00" size="2" maxlength="2">시
+                                                <input type="text" name="s_min" value="00" size="2" maxlength="2">
+                                                <span class="mr-2">분</span>
+                                                <span class="mr-2">~</span>
+                                                <input type="text" name="e_date" value="2020.01.01" size="11"
+                                                    maxlength="11">일
+                                                <input type="text" name="e_hour" value="23" size="2" maxlength="2">시
+                                                <input type="text" name="e_min" value="59" size="2" maxlength="2">분
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-1" for="platform">플랫폼</label>
+                                            <div class="col-md-6">
+                                                <select id="platform" name="platform" class="form-control">
+                                                    <option value="total">전체</option>
+                                                    <option value="android">ANDROID</option>
+                                                    <option value="ios">IOS</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-5"></div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-1" for="target">타겟</label>
+                                            <div class="col-md-6">
+                                                <select id="target" name="target" class="form-control">
+                                                    <option value="none">NONE</option>
+                                                    <option value="web">WEB</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-5"></div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-1" for="status">상태</label>
+                                            <div class="col-md-6">
+                                                <select id="status" name="status" class="form-control">
                                                     <option value="active">활성</option>
                                                     <option value="inactive">비활성</option>
                                                 </select>
                                             </div>
+                                            <div class="col-md-5"></div>
                                         </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="bottom_btn">
-                                        <button type="button" class="btn btn-lg btn-secondary mr-2"
-                                            onclick="history.back();">취 소</button>
-                                        <button type="submit" class="btn btn-lg btn-primary">저 장</button>
+                                        <!-- end row -->
+
                                     </div>
+                                    <div class="card-footer">
+                                        <div class="bottom_btn">
+                                            <button type="button" class="btn btn-lg btn-secondary mr-2"
+                                                onclick="history.back();">취 소</button>
+                                            <button type="submit" class="btn btn-lg btn-primary">등 록</button>
+                                        </div>
+                                    </div>
+
                                 </div>
-                                </form>
-                                <!-- body contents end -->
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <!-- end of row -->
+                    </form>
             </main>
         </div>
-
-
-
         <!-- end of body -->
         <footer class="c-footer">
         </footer>
     </div>
+
+
     <!-- CoreUI and necessary plugins-->
     <script src="vendors/pace-progress/js/pace.min.js"></script>
     <script src="vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
@@ -239,7 +267,10 @@
     <!-- Plugins and scripts required by this view-->
     <script src="vendors/jquery/js/jquery.min.js"></script>
     <script src="vendors/jquery-validation/js/jquery.validate.js"></script>
-    <script src="js/user_add.js"></script>
+    <script src="js/banner_add.js"></script>
+    <script src="vendors/quill/js/quill.min.js"></script>
+    <script src="js/text-editor.js"></script>
+
 </body>
 
 </html>
