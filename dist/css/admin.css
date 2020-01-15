@@ -1,3 +1,7 @@
+input[type=radio] {
+    width: 1rem;
+    height: 1rem;
+}
 
 .t-border{
   border: dotted orange;
