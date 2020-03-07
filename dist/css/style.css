@@ -3,7 +3,7 @@
  * CoreUI Pro UI Kit
  * @version v3.0.0-beta.3
  * @link https://coreui.io/pro/
- * Copyright (c) 2019 creativeLabs Ĺukasz Holeczek
+ * Copyright (c) 2019 creativeLabs Łukasz Holeczek
  * License (https://coreui.io/pro/license/)
  */
 :root {
@@ -182,7 +182,7 @@ a {
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: #321fdb;
 }
 
@@ -1704,14 +1704,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #3E5B8C;
-  border-color: #3E5B8C;
+  background-color: #321fdb;
+  border-color: #321fdb;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #354774;
-  border-color: #354774;
+  background-color: #2a1ab9;
+  border-color: #2819ae;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -5089,7 +5089,7 @@ html:not([dir="rtl"]) .custom-select-lg {
 }
 
 .custom-file-input:lang(en) ~ .custom-file-label::after {
-  content: "업로드";
+  content: "Browse";
 }
 
 .custom-file-input ~ .custom-file-label[data-browse]::after {
@@ -5120,7 +5120,7 @@ html:not([dir="rtl"]) .custom-select-lg {
   z-index: 3;
   display: block;
   height: calc(1.5em + 0.75rem);
-  content: "업로드";
+  content: "Browse";
   background-color: #ebedef;
   border-left: inherit;
   border-radius: 0 0.25rem 0.25rem 0;
@@ -10656,8 +10656,8 @@ html:not([dir="rtl"]) .c-sidebar-close {
 .c-sidebar-nav-title {
   padding: 0.75rem 1rem;
   margin-top: 1rem;
-  font-size: 100%;
-  font-weight: 800;
+  font-size: 80%;
+  font-weight: 700;
   text-transform: uppercase;
   transition: 0.25s;
 }
@@ -11627,7 +11627,7 @@ html:not([dir="rtl"]) .c-sidebar.c-sidebar-show.c-sidebar-right, html:not([dir="
 
 .c-sidebar .c-sidebar-nav-link:hover, .c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
   color: #fff;
-  background: #3E5B8C;
+  background: #321fdb;
 }
 
 .c-sidebar .c-sidebar-nav-link:hover .c-sidebar-nav-icon, .c-sidebar .c-sidebar-nav-dropdown-toggle:hover .c-sidebar-nav-icon {
